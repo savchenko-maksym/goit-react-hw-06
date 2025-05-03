@@ -1,0 +1,8 @@
+.seach {
+  margin-bottom: 15px;
+  width: 220px;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

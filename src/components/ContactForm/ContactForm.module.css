@@ -1,0 +1,30 @@
+.formWrapper {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 220px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.addContactFofm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  button {
+    margin: 0 auto;
+  }
+}
+
+.formField {
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+}

@@ -11,21 +11,11 @@ function App() {
   const contacts = useSelector((state) => state.contacts.items);
   const dispatch = useDispatch();
 
-  // Ініціалізація контактів із localStorage або початкового json
   useEffect(() => {
-    const savedContacts = window.localStorage.getItem("saved-contacts");
-    const contactsToSet = savedContacts
-      ? JSON.parse(savedContacts)
-      : initialContacts;
-    dispatch(setInitialContacts(contactsToSet));
-  }, [dispatch]);
-
-  // Синхронізація Redux-стану з localStorage
-  useEffect(() => {
-    if (contacts.length > 0) {
-      window.localStorage.setItem("saved-contacts", JSON.stringify(contacts));
+    if (contacts.length === 0) {
+      dispatch(setInitialContacts(initialContacts));
     }
-  }, [contacts]);
+  }, [contacts, dispatch]);
 
   return (
     <div>
